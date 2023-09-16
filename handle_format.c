@@ -14,6 +14,8 @@ int handle_format(char c, va_list args)
 		{'c', print_char},
 		{'s', print_str},
 		{'%', print_percent},
+		{'i', print_int},
+		{'d', print_int},
 		{'\0', 0},
 	};
 
