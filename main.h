@@ -18,6 +18,7 @@ typedef struct formats
 
 
 int _printf(const char *format, ...);
+int handle_format(char c, va_list args);
 int _putchar(char c);
 int print_char(va_list args);
 int print_str(va_list args);
