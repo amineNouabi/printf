@@ -7,10 +7,9 @@
  * Return: length
  */
 
-int print_int_helper(int n)
+int print_int_helper(int n, int len)
 {
         int num;
-        static int len;
 
         if (n < 0)
         {
@@ -22,7 +21,7 @@ int print_int_helper(int n)
                 num = n;
 
         if (num / 10)
-                print_int_helper(num / 10);
+                len = print_int_helper(num / 10, len);
 
         _putchar((num % 10) + '0');
         return (++len);
@@ -37,6 +36,6 @@ int print_int_helper(int n)
 
 int print_int(va_list args)
 {
-	return (print_int_helper(va_arg(args, int)));
+	return (print_int_helper(va_arg(args, int), 0));
 }
 

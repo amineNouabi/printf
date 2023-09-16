@@ -18,7 +18,7 @@ int main(void)
     printf("Length:[%d, %i]\n", len2, len2);
     len = _printf("Negative:[%d]\n", -762534);
     len2 = printf("Negative:[%d]\n", -762534);
-    printf("len: %d, len2: %d\n", len, len2);
+    _printf("len: %d, len2: %d\n", len, len2);
     _printf("Character:[%c]\n", 'H');
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
