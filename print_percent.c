@@ -4,14 +4,11 @@
  * print_percent - Prints % sign
  * @args: args from va_list (unused)
  *
- * Return: 1
+ * Return: 1 on success -1 on error
  */
 
 int print_percent(va_list args)
 {
-	(void) args;
-
-	_putchar('%');
-
-	return (1);
+	(void)args;
+	return (_putchar('%'));
 }

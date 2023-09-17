@@ -5,28 +5,21 @@
  * print_str - Prints a string
  * @args: args from va_list
  *
- * Return: length (int)
+ * Return: length (int) on success -1 on error
  */
 
 int print_str(va_list args)
 {
 	int len = 0;
 	char *str = va_arg(args, char *);
-	char *null_str = "(null)";
 
-	if (str == NULL)
-	{
-		while (null_str[len])
-		{
-			_putchar(null_str[len]);
-			len++;
-		}
-		return (len);
-	}
+	if (!str)
+		str = "(null)";
 
 	while (str[len])
 	{
-		_putchar(str[len]);
+		if (_putchar(str[len]) == -1)
+			return (-1);
 		len++;
 	}
 	return (len);
