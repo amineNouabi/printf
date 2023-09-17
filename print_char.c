@@ -4,14 +4,11 @@
  * print_char - Prints a char
  * @args: args from va_list
  *
- * Return: 1
+ * Return: 1 on success -1 on error
  */
 
 int print_char(va_list args)
 {
-	char c = va_arg(args, int);
-
-	_putchar(c);
-	return (1);
+	return (_putchar(va_arg(args, int)));
 }
 
