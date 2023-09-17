@@ -10,7 +10,7 @@
 
 int print_int_helper(int n, int len)
 {
-	int num;
+	unsigned int num;
 
 	if (n < 0)
 	{
