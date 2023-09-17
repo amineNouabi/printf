@@ -32,6 +32,8 @@ int print_int_helper(int n, int len)
 /**
  * print_int - Prints an integer.
  * @args: Integer to print.
+ * @buffer: buffer
+ *
  * Return: length
  */
 

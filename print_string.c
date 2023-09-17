@@ -4,6 +4,7 @@
 /**
  * print_str - Prints a string
  * @args: args from va_list
+ * @buffer: buffer to print to
  *
  * Return: length (int) on success -1 on error
  */

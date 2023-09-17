@@ -4,6 +4,7 @@
  * handle_format - selects the correct function to format the input
  * @c: character that specifies the operation to perform
  * @args: list of arguments
+ * @buffer: buffer to store output
  * Return: number of characters printed
  */
 int handle_format(char c, va_list args, buffer_t *buffer)

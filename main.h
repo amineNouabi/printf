@@ -10,12 +10,11 @@
 
 
 /**
- * struct formats - Defines each format specifier char with its function
- * @c: format specifier char
- * @f: Relevant function to format specifier char
+ * struct buffer - Defines a new type struct buffer
+ * @buffer: Pointer to a char buffer
+ * @length: Length of the buffer
+ * @printed: Number of chars printed
  */
-
-
 typedef struct buffer
 {
 	char *buffer;
@@ -23,6 +22,11 @@ typedef struct buffer
 	unsigned int printed;
 } buffer_t;
 
+/**
+ * struct formats - Defines each format specifier char with its function
+ * @c: format specifier char
+ * @f: Relevant function to format specifier char
+ */
 typedef struct formats
 {
 	char c;
