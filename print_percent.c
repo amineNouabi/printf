@@ -7,8 +7,8 @@
  * Return: 1 on success -1 on error
  */
 
-int print_percent(va_list args)
+int print_percent(va_list args, buffer_t *buffer)
 {
 	(void)args;
-	return (_putchar('%'));
+	return (append_char(buffer, '%'));
 }

@@ -35,8 +35,9 @@ int print_int_helper(int n, int len)
  * Return: length
  */
 
-int print_int(va_list args)
+int print_int(va_list args, buffer_t *buffer)
 {
+	(void)buffer;
 	return (print_int_helper(va_arg(args, int), 0));
 }
 

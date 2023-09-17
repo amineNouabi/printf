@@ -6,7 +6,7 @@
  * @args: list of arguments
  * Return: number of characters printed
  */
-int handle_format(char c, va_list args)
+int handle_format(char c, va_list args, buffer_t *buffer)
 {
 	int i = -1;
 
@@ -21,9 +21,9 @@ int handle_format(char c, va_list args)
 
 	while (formatters[++i].c)
 		if (formatters[i].c == c)
-			return (formatters[i].f(args));
+			return (formatters[i].f(args, buffer));
 
-	_putchar('%');
-	_putchar(c);
+	append_char(buffer, '%');
+	append_char(buffer, c);
 	return (2);
 }

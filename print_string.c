@@ -8,7 +8,7 @@
  * Return: length (int) on success -1 on error
  */
 
-int print_str(va_list args)
+int print_str(va_list args, buffer_t *buffer)
 {
 	int len = 0;
 	char *str = va_arg(args, char *);
@@ -16,12 +16,7 @@ int print_str(va_list args)
 	if (!str)
 		str = "(null)";
 
-	while (str[len])
-	{
-		if (_putchar(str[len]) == -1)
-			return (-1);
-		len++;
-	}
+	append_str(buffer, str);
 	return (len);
 }
 

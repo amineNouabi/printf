@@ -7,8 +7,8 @@
  * Return: 1 on success -1 on error
  */
 
-int print_char(va_list args)
+int print_char(va_list args, buffer_t *buffer)
 {
-	return (_putchar(va_arg(args, int)));
+	return (append_char(buffer, va_arg(args, int)));
 }
 

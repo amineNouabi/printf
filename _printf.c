@@ -9,10 +9,15 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, j, count = 0;
+	int i = 0, count = 0;
 	va_list args;
+	buffer_t *buffer;
 
 	if (format == NULL)
+		return (-1);
+
+	buffer = create_buffer();
+	if (!buffer)
 		return (-1);
 
 	va_start(args, format);
@@ -29,19 +34,18 @@ int _printf(const char *format, ...)
 				continue;
 			}
 
-			j = handle_format(format[i], args);
-
-			if (j == -1)
+			if (handle_format(format[i], args, buffer) == -1)
 				return (-1);
-
-			count += j;
 		}
 		else
-		{
-			_putchar(format[i]);
-			count++;
-		}
+			append_char(buffer, format[i]);
 	}
+
+	if (buffer->length)
+		flush_buffer(buffer);
+
+	count = buffer->printed;
+	free_buffer(buffer);
 	va_end(args);
 	return (count);
 }
