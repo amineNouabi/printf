@@ -9,12 +9,8 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int j;
+	int i = 0, j, count = 0;
 	va_list args;
-	int count;
-
-	count = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -26,6 +22,12 @@ int _printf(const char *format, ...)
 		{
 			if (!format[++i])
 				return (-1);
+
+			if (format[i] == 'n')
+			{
+				*va_arg(args, int *) = count;
+				continue;
+			}
 
 			j = handle_format(format[i], args);
 
