@@ -1,6 +1,7 @@
 #ifndef PRINTF_H
 #define PRINTF_H
 
+#include <unistd.h>
 #include <stdarg.h>
 #include <stddef.h>
 
@@ -25,4 +26,4 @@ int print_str(va_list args);
 int print_percent(va_list args);
 int print_int(va_list args);
 
-#endif
+#endif /* PRINTF_H */
