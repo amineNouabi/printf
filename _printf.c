@@ -25,17 +25,16 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (!format[++i])
-				return (-1);
-
-			if (format[i] == 'n')
+			if (format[++i] == 'n')
 			{
 				*va_arg(args, int *) = count;
 				continue;
 			}
-
-			if (handle_format(format[i], args, buffer) == -1)
+			if (!format[i] || handle_format(format[i], args, buffer) == -1)
+			{
+				free_buffer(buffer);
 				return (-1);
+			}
 		}
 		else
 			append_char(buffer, format[i]);
