@@ -11,12 +11,16 @@
 int print_binary(va_list args, buffer_t *buffer)
 {
 	char binary[256];
-	int length = 0;
-	int i;
+	int length = 0, i;
 	unsigned int n;
 	char tmp;
 
 	n = va_arg(args, unsigned int);
+	if (n == 0)
+	{
+		append_char(buffer, '0');
+		return (1);
+	}
 	while (n != 0)
 	{
 		if (n % 2 == 0)
