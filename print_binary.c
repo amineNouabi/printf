@@ -36,5 +36,5 @@ int print_binary(va_list args, buffer_t *buffer)
 		binary[i] = binary[length - i - 1];
 		binary[length - i - 1] = tmp;
 	}
-	return(append_str(buffer, binary));
+	return (append_str(buffer, binary));
 }
