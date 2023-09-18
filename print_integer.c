@@ -23,6 +23,7 @@ int print_int_helper(int n, buffer_t *buffer)
 	if (num / 10)
 		print_int_helper(num / 10, buffer);
 	append_char(buffer, (num % 10) + '0');
+	return (1);
 }
 
 /**
