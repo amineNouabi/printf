@@ -2,7 +2,7 @@
 
 /**
  * print_binary - Prints integer in binary
- * @n: unsigned int  to print as binary
+ * @args: unsigned int to print as binary
  * @buffer: buffer
  *
  * Return: length
@@ -10,10 +10,9 @@
 
 int print_binary(va_list args, buffer_t *buffer)
 {
-	char binary[256];
+	char binary[256], tmp;
 	int length = 0, i;
 	unsigned int n;
-	char tmp;
 
 	n = va_arg(args, unsigned int);
 	if (n == 0)
@@ -27,7 +26,6 @@ int print_binary(va_list args, buffer_t *buffer)
 			binary[length] = '0';
 		else
 			binary[length] = '1';
-
 		n /= 2;
 		length++;
 	}
