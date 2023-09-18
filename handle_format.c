@@ -5,7 +5,7 @@
  * @c: character that specifies the operation to perform
  * @args: list of arguments
  * @buffer: buffer to store output
- * Return: number of characters printed
+ * Return: 1 on success, -1 on error
  */
 int handle_format(char c, va_list args, buffer_t *buffer)
 {
@@ -23,8 +23,5 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 	while (formatters[++i].c)
 		if (formatters[i].c == c)
 			return (formatters[i].f(args, buffer));
-
-	append_char(buffer, '%');
-	append_char(buffer, c);
-	return (2);
+	return (append_char(buffer, '%') + append_char(buffer, c) == 2 ? 1 : -1);
 }

@@ -37,7 +37,6 @@ typedef struct formats
 
 int _printf(const char *format, ...);
 int handle_format(char, va_list, buffer_t *);
-int _putchar(char);
 /* char *itoa(int num, char *str, int base);//-100 -> "-100" */
 int print_char(va_list, buffer_t *);
 int print_str(va_list, buffer_t *);

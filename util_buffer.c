@@ -83,16 +83,14 @@ int append_char(buffer_t *buffer, char c)
  * flush_buffer - flushes buffer to stdout
  * @buffer: buffer to print
  *
- * Return: number of characters printed (int) or -1 on error;
+ * Return: 1 on success -1 on error;
  */
 int flush_buffer(buffer_t *buffer)
 {
-	int count = write(1, buffer->buffer, buffer->length);
-
-	if (count < 0)
+	if (write(1, buffer->buffer, buffer->length) < 0)
 		return (-1);
 
-	buffer->printed += count;
+	buffer->printed += buffer->length;
 	buffer->length = 0;
-	return (count);
+	return (1);
 }

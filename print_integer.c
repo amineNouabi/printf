@@ -3,30 +3,26 @@
 /**
  * print_int_helper - Helper function
  * @n: Integer to print
- * @len: Length
+ * @buffer: buffer
  *
  * Return: length
  */
 
-int print_int_helper(int n, int len)
+int print_int_helper(int n, buffer_t *buffer)
 {
 	unsigned int num;
 
 	if (n < 0)
 	{
-		_putchar('-');
+		append_char(buffer, '-');
 		num = -n;
-		len++;
 	}
 	else
 		num = n;
 
 	if (num / 10)
-		len = print_int_helper(num / 10, len);
-
-	_putchar((num % 10) + '0');
-	return (++len);
-
+		print_int_helper(num / 10, buffer);
+	append_char(buffer, (num % 10) + '0');
 }
 
 /**
@@ -39,7 +35,6 @@ int print_int_helper(int n, int len)
 
 int print_int(va_list args, buffer_t *buffer)
 {
-	(void)buffer;
-	return (print_int_helper(va_arg(args, int), 0));
+	return (print_int_helper(va_arg(args, int), buffer));
 }
 
