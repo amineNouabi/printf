@@ -19,6 +19,7 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'d', print_int},
 		{'b', print_binary},
 		{'o', print_octal},
+		{'u', print_unsigned},
 		{'\0', 0},
 	};
 

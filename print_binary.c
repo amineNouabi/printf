@@ -17,8 +17,7 @@ int print_binary(va_list args, buffer_t *buffer)
 	n = va_arg(args, unsigned int);
 	if (n == 0)
 	{
-		append_char(buffer, '0');
-		return (1);
+		return (append_char(buffer, '0'));
 	}
 	while (n != 0)
 	{
@@ -36,5 +35,5 @@ int print_binary(va_list args, buffer_t *buffer)
 		binary[i] = binary[length - i - 1];
 		binary[length - i - 1] = tmp;
 	}
-	return(append_str(buffer, binary));
+	return (append_str(buffer, binary));
 }

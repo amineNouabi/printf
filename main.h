@@ -44,6 +44,7 @@ int print_percent(va_list, buffer_t *);
 int print_int(va_list, buffer_t *);
 int print_binary(va_list, buffer_t *);
 int print_octal(va_list, buffer_t *);
+int print_unsigned(va_list, buffer_t *);
 
 
 /********  Buffer  ************/

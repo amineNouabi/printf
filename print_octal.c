@@ -17,7 +17,7 @@ int print_octal(va_list args, buffer_t *buffer)
 	n = va_arg(args, unsigned int);
 
 	if (n == 0)
-		return(append_char(buffer, '0'));
+		return (append_char(buffer, '0'));
 	while (n)
 	{
 		octal[length] = (n % 8) + '0';
