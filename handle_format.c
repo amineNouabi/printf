@@ -17,6 +17,7 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'%', print_percent},
 		{'i', print_int},
 		{'d', print_int},
+		{'b', print_binary},
 		{'\0', 0},
 	};
 
