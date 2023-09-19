@@ -15,7 +15,7 @@ int print_pointer(va_list args, buffer_t *buffer)
 	void *arg = va_arg(args, void *);
 
 	if (!arg)
-		return (-1);
+		return (append_str(buffer, "(nil)"));
 	n = (unsigned long int)arg;
 
 	i = 0;
