@@ -20,6 +20,8 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'b', print_binary},
 		{'o', print_octal},
 		{'u', print_unsigned},
+		{'x', print_hex},
+		{'X', print_hex_upper},
 		{'\0', 0},
 	};
 
