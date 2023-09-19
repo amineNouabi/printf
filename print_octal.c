@@ -10,8 +10,8 @@
 
 int print_octal(va_list args, buffer_t *buffer)
 {
-	char octal[32], tmp;
-	int length = 0, i;
+	char octal[32];
+	int length = 0;
 	unsigned int n;
 
 	n = va_arg(args, unsigned int);
@@ -25,11 +25,6 @@ int print_octal(va_list args, buffer_t *buffer)
 		length++;
 	}
 	octal[length] = '\0';
-	for (i = 0; i < (length / 2); i++)
-	{
-		tmp = octal[i];
-		octal[i] = octal[length - i - 1];
-		octal[length - i - 1] = tmp;
-	}
+	_strrev(octal);
 	return (append_str(buffer, octal));
 }
