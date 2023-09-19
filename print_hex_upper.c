@@ -29,12 +29,6 @@ int print_hex_upper(va_list args, buffer_t *buffer)
 		num /= 16;
 	}
 	hex[length] = '\0';
-
-	for (i = 0; i < (length / 2); i++)
-	{
-		tmp = hex[i];
-		hex[i] = hex[length - i - 1];
-		hex[length - i - 1] = tmp;
-	}
+	_strrev(hex);
 	return (append_str(buffer, hex));
 }

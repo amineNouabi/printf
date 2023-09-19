@@ -4,7 +4,7 @@
  * print_hexa_upper - prints unsigned int in hexadecimal with uppercase letters
  * @args: arguments list.
  * @buffer: buffer.
- * 
+ *
  * Return: 1 if success 0 if error.
  */
 int print_hexa_upper(va_list args, buffer_t *buffer)
@@ -29,10 +29,10 @@ int print_hexa_upper(va_list args, buffer_t *buffer)
 }
 
 /**
- * print_hexa_upper - prints unsigned int in hexadecimal with lowercase letters
+ * print_hexa_lower - prints unsigned int in hexadecimal with lowercase letters
  * @args: arguments list.
  * @buffer: buffer.
- * 
+ *
  * Return: 1 if success 0 if error.
  */
 int print_hexa_lower(va_list args, buffer_t *buffer)

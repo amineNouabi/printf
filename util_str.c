@@ -16,7 +16,7 @@ int _strlen(char *s)
 }
 
 /**
- * rev_string - reverses string
+ * _strrev - reverses string
  * @s: String
  * Return: void
  */
@@ -38,8 +38,9 @@ void _strrev(char *s)
 	}
 }
 
+
 /**
- * _strdup - allocates memory for a copy of a string 
+ * _strdup - allocates memory for a copy of a string
  * @s: String
  * Return: Pointer to new string or NULL
  */
@@ -52,7 +53,7 @@ char *_strdup(char *s)
 		return (0);
 
 	len = _strlen(s);
-	dest = (char *) malloc(sizeof (char) * (len + 1));
+	dest = (char *) malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (0);
 

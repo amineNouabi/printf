@@ -19,7 +19,7 @@ int print_str(va_list args, buffer_t *buffer)
 }
 
 /**
- * print_str - Prints a string
+ * print_str_rev - Prints reverse of a string
  * @args: args from va_list
  * @buffer: buffer to print to
  *
@@ -31,7 +31,7 @@ int print_str_rev(va_list args, buffer_t *buffer)
 	int status;
 	char *str = _strdup(va_arg(args, char *));
 
-	if(!str)
+	if (!str)
 		return (-1);
 	_strrev(str);
 	status = append_str(buffer, str);
