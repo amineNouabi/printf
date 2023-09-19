@@ -10,9 +10,9 @@
 
 int print_hex(va_list args, buffer_t *buffer)
 {
-	char hex[16], tmp;
+	char hex[16];
 	unsigned int num, remainder;
-	int i = 0, length = 0;
+	int length = 0;
 
 	num = va_arg(args, unsigned int);
 	if (num == 0)
