@@ -22,6 +22,7 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'u', print_unsigned},
 		{'x', print_hex},
 		{'X', print_hex_upper},
+		{'p', print_pointer},
 		{'S', print_s},
 		{'r', print_str_rev},
 		{'R', print_str_rot13},
