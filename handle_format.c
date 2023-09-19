@@ -19,8 +19,10 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'d', print_int},
 		{'b', print_binary},
 		{'o', print_octal},
-		{'x', print_hexa_lower},
-		{'X', print_hexa_upper},
+		{'u', print_unsigned},
+		{'x', print_hex},
+		{'X', print_hex_upper},
+		{'S', print_s},
 		{'r', print_str_rev},
 		{'\0', 0},
 	};

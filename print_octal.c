@@ -11,17 +11,13 @@
 int print_octal(va_list args, buffer_t *buffer)
 {
 	char octal[32], tmp;
-	int length = 0, i, n;
+	int length = 0, i;
+	unsigned int n;
 
-	n = va_arg(args, int);
+	n = va_arg(args, unsigned int);
 
 	if (n == 0)
-		return(append_char(buffer, '0'));
-	if (n < 0)
-	{
-		append_char(buffer, '-');
-		n = -n;
-	}
+		return (append_char(buffer, '0'));
 	while (n)
 	{
 		octal[length] = (n % 8) + '0';
