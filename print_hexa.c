@@ -9,7 +9,7 @@
  */
 int print_hexa_upper(va_list args, buffer_t *buffer)
 {
-	char *base = "0123456789ABCDEF", str[30];
+	char *base = "0123456789ABCDEF", str[32];
 	unsigned int n, i;
 
 	n = va_arg(args, unsigned int);
@@ -37,7 +37,7 @@ int print_hexa_upper(va_list args, buffer_t *buffer)
  */
 int print_hexa_lower(va_list args, buffer_t *buffer)
 {
-	char *base = "0123456789abcdef", str[30];
+	char *base = "0123456789abcdef", str[32];
 	unsigned int n, i;
 
 	n = va_arg(args, unsigned int);

@@ -23,6 +23,7 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'x', print_hex},
 		{'X', print_hex_upper},
 		{'S', print_s},
+		{'r', print_str_rev},
 		{'\0', 0},
 	};
 
