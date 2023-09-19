@@ -49,6 +49,7 @@ int print_hex(va_list, buffer_t *);
 int print_hex_upper(va_list, buffer_t *);
 int print_s(va_list, buffer_t *);
 int print_str_rev(va_list, buffer_t *);
+int print_str_rot13(va_list, buffer_t *);
 
 
 /********  Buffer ************/
@@ -62,5 +63,6 @@ int append_char(buffer_t *, char);
 int _strlen(char *);
 char *_strdup(char *);
 void _strrev(char *);
+void _strrot13(char *str);
 
 #endif /* PRINTF_H */

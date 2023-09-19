@@ -24,6 +24,7 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'X', print_hex_upper},
 		{'S', print_s},
 		{'r', print_str_rev},
+		{'R', print_str_rot13},
 		{'\0', 0},
 	};
 
