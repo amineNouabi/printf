@@ -20,6 +20,7 @@ typedef struct buffer
 	char *buffer;
 	unsigned int length;
 	unsigned int printed;
+
 } buffer_t;
 
 /**
@@ -44,13 +45,20 @@ int print_percent(va_list, buffer_t *);
 int print_int(va_list, buffer_t *);
 int print_binary(va_list, buffer_t *);
 int print_octal(va_list, buffer_t *);
+int print_hexa_upper(va_list, buffer_t *);
+int print_hexa_lower(va_list, buffer_t *);
 
 
-/********  Buffer  ************/
+/********  Buffer ************/
 buffer_t *create_buffer(void);
 void free_buffer(buffer_t *buffer);
 int flush_buffer(buffer_t *);
 int append_str(buffer_t *, char *);
 int append_char(buffer_t *, char);
+
+/******** String ************/
+int _strlen(char *s);
+char *_strdup(const char *s);
+void _strrev(char *);
 
 #endif /* PRINTF_H */
