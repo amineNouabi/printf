@@ -38,7 +38,12 @@ void _strrev(char *s)
 	}
 }
 
-char *_strdup(const char *s)
+/**
+ * _strdup - allocates memory for a copy of a string 
+ * @s: String
+ * Return: Pointer to new string or NULL
+ */
+char *_strdup(char *s)
 {
 	int len, i;
 	char *dest;

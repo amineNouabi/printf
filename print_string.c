@@ -31,6 +31,8 @@ int print_str_rev(va_list args, buffer_t *buffer)
 	int status;
 	char *str = _strdup(va_arg(args, char *));
 
+	if(!str)
+		return (-1);
 	_strrev(str);
 	status = append_str(buffer, str);
 	free(str);

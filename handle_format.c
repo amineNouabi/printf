@@ -21,6 +21,7 @@ int handle_format(char c, va_list args, buffer_t *buffer)
 		{'o', print_octal},
 		{'x', print_hexa_lower},
 		{'X', print_hexa_upper},
+		{'r', print_str_rev},
 		{'\0', 0},
 	};
 

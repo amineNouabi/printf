@@ -47,18 +47,19 @@ int print_binary(va_list, buffer_t *);
 int print_octal(va_list, buffer_t *);
 int print_hexa_upper(va_list, buffer_t *);
 int print_hexa_lower(va_list, buffer_t *);
+int print_str_rev(va_list, buffer_t *);
 
 
 /********  Buffer ************/
 buffer_t *create_buffer(void);
-void free_buffer(buffer_t *buffer);
+void free_buffer(buffer_t *);
 int flush_buffer(buffer_t *);
 int append_str(buffer_t *, char *);
 int append_char(buffer_t *, char);
 
 /******** String ************/
-int _strlen(char *s);
-char *_strdup(const char *s);
+int _strlen(char *);
+char *_strdup(char *);
 void _strrev(char *);
 
 #endif /* PRINTF_H */
