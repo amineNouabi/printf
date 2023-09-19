@@ -15,7 +15,8 @@ int print_hex_upper(va_list args, buffer_t *buffer)
 	int i = 0, length = 0;
 
 	num = va_arg(args, unsigned int);
-
+	if (num == 0)
+		return (append_char(buffer, '0'));
 	while (num)
 	{
 		remainder = num % 16;
